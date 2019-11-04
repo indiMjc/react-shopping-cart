@@ -10,23 +10,23 @@ import ShoppingCart from "./components/ShoppingCart";
 import { ProductProvider } from "./contexts/ProductContext";
 
 function App() {
-  const addItem = item => {
-    setCart([...cart, item]);
-  };
+  //   const addItem = item => {
+  //     setCart([...cart, item]);
+  //   };
 
   return (
     <ProductProvider>
       <div className="App">
-        <Navigation cart={cart} />
+        <Navigation />
 
         {/* Routes */}
-        <Route
+        {/* <Route
           exact
           path="/"
           render={() => <Products products={products} addItem={addItem} />}
         />
 
-        <Route path="/cart" render={() => <ShoppingCart cart={cart} />} />
+        <Route path="/cart" render={() => <ShoppingCart cart={cart} />} /> */}
       </div>
     </ProductProvider>
   );
