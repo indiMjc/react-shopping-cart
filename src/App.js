@@ -11,13 +11,16 @@ import { ProductProvider } from "./contexts/ProductContext";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const addItem = item => {
+    setCart([...cart, item]);
+  };
   return (
     <ProductProvider>
       <div className="App">
         <Navigation cart={cart} />
         {/* Routes */}
         <Route exact path="/" component={Products} />} />
-        {/* <Route path="/cart" render={() => <ShoppingCart cart={cart} />} /> */}
+        <Route path="/cart" render={() => <ShoppingCart cart={cart} />} />
       </div>
     </ProductProvider>
   );
