@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 
 // Components
@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import Products from "./components/Products";
 import ShoppingCart from "./components/ShoppingCart";
 
+// Context
 import { ProductProvider } from "./contexts/ProductContext";
 import { CartProvider } from "./contexts/CartContext";
 
